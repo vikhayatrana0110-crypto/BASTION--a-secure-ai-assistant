@@ -13,6 +13,7 @@ class Setting(BaseSettings):
     jwt_secret: str = ""
     database_url_owner: str = "postgresql://bastion_owner:bastion_owner@localhost:5432/bastion"
     database_url_app: str = "postgresql://bastion_app:bastion_app@localhost:5432/bastion"
+    database_url_worker: str = "postgresql://bastion_worker:bastion_worker@localhost:5432/bastion"
 
 @lru_cache
 def get_settings() -> Setting:
